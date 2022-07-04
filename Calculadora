@@ -1,0 +1,111 @@
+package com.mycompany.calculadora;
+
+/**
+ *
+ * @author Ian Leon
+ */ 
+import javax.swing.JOptionPane;
+public class Calculadora {
+    
+    
+    public static void main(String[] args) {
+        
+        int opcion=0;
+        double num1,num2,res;
+  
+        do
+        {
+        
+        opcion=Integer.parseInt(JOptionPane.showInputDialog("Selecione una Opcion:"+
+                "\n" + "\n" + "1.Realizar una Operacion\n"+ "2. Salir\n"));
+        
+        switch(opcion)
+         {
+            case 1:
+                do
+                {
+                opcion=Integer.parseInt(JOptionPane.showInputDialog("Selecione una Operacion"+
+                "\n" + "\n" + "1.Sumar\n"+ "2. Restar\n"+"3. Multiplicacion\n" + "4. Division\n"+
+             "5. Potencia\n"+"6. Raiz Cuadrada\n"+"7. Salir\n"));
+                
+                 switch(opcion)
+         {
+            case 1:
+                
+               num1 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 1: "));
+               num2 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 2: "));
+               
+               res = num1 + num2;
+               
+               JOptionPane.showMessageDialog(null,"El Resultado es:  " + res);
+                
+               break;
+               
+               case 2:
+                
+               num1 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 1: "));
+               num2 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 2: "));
+               res = num1 - num2;
+               
+               JOptionPane.showMessageDialog(null,"El Resultado es:  " + res);
+               
+               break;
+               
+               case 3:
+                
+               num1 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 1: "));
+               num2 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 2: "));
+               res = num1 * num2;
+               
+               JOptionPane.showMessageDialog(null,"El Resultado es:  " + res);
+               
+               break;
+               
+               case 4:
+                
+               num1 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 1: "));
+               num2 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 2: "));
+               res = num1 / num2;
+               
+               JOptionPane.showMessageDialog(null,"El Resultado es:  " + res);
+               
+               break;
+               
+               case 5:
+                
+               num1 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 1: "));
+               num2 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 2: "));
+               res = (Math.pow(num1,num2));
+               
+               JOptionPane.showMessageDialog(null,"El Resultado es:  " + res);
+               
+               break;
+               
+              case 6:
+                
+               num1 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero : "));
+               
+               res = (Math.sqrt(num1));
+               
+               JOptionPane.showMessageDialog(null,"El Resultado es:  " + res);
+               
+               break;
+               
+               case 7:
+               
+               JOptionPane.showMessageDialog(null,"El Programa a finalizado con Exito...");
+        }      
+        } while (opcion!=7);
+           
+               break;
+               
+               case 2:
+               
+             JOptionPane.showMessageDialog(null,"El Programa a finalizado con Exito...");
+        }      
+        } while (opcion!=2);
+        
+        
+      
+    }
+}
