@@ -2,7 +2,7 @@ package com.mycompany.calculadora;
 
 /**
  *
- * @author Ian Leon
+ * @author Ivan Leon
  */ 
 import javax.swing.JOptionPane;
 public class Calculadora {
@@ -31,63 +31,106 @@ public class Calculadora {
                  switch(opcion)
          {
             case 1:
-                
+                try {
                num1 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 1: "));
                num2 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 2: "));
                
                res = num1 + num2;
                
+               res = Math.round(res * 100) / 100d; 
+               
                JOptionPane.showMessageDialog(null,"El Resultado es:  " + res);
-                
+                }catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null,"Introduzca un valor valido..!!");
+                    
+                }
                break;
                
                case 2:
                 
+                   try { 
                num1 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 1: "));
                num2 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 2: "));
                res = num1 - num2;
                
-               JOptionPane.showMessageDialog(null,"El Resultado es:  " + res);
+               res = Math.round(res * 100) / 100d; 
                
+               JOptionPane.showMessageDialog(null,"El Resultado es:  " + res);
+                   } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null,"Introduzca un valor valido..!!");
+                   }
+                   
                break;
                
                case 3:
                 
+                   try {
                num1 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 1: "));
                num2 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 2: "));
                res = num1 * num2;
                
+               res = Math.round(res * 100) / 100d; 
+               
                JOptionPane.showMessageDialog(null,"El Resultado es:  " + res);
+               
+                   } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null,"Introduzca un valor valido..!!");
+                
+                   }
                
                break;
                
                case 4:
                 
+                   
+                   try {
                num1 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 1: "));
                num2 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 2: "));
                res = num1 / num2;
                
+               res = Math.round(res * 100) / 100d; 
+               
                JOptionPane.showMessageDialog(null,"El Resultado es:  " + res);
+               
+                   } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null,"Introduzca un valor valido..!!");
+                   } catch (ArithmeticException ex) {
+                 JOptionPane.showMessageDialog(null,"El cero no se divide..!!"); 
+                   }
                
                break;
                
                case 5:
                 
+                   try{
                num1 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 1: "));
                num2 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero 2: "));
                res = (Math.pow(num1,num2));
                
+               res = Math.round(res * 100) / 100d; 
+                   
                JOptionPane.showMessageDialog(null,"El Resultado es:  " + res);
+                   } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null,"Introduzca un valor valido..!!");
+                   }
                
                break;
                
               case 6:
+                  
+                  try {
                 
                num1 = Double.parseDouble( JOptionPane.showInputDialog("Digite Numero : "));
                
                res = (Math.sqrt(num1));
                
+               res = Math.round(res * 100) / 100d; 
+               
                JOptionPane.showMessageDialog(null,"El Resultado es:  " + res);
+               
+                  } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null,"Introduzca un valor valido..!!");
+                }
                
                break;
                
